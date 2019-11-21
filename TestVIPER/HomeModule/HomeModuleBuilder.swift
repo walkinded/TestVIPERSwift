@@ -10,15 +10,15 @@ import UIKit
 
 class HomeModuleBuilder {
     
-    func build() -> UIViewController {
+    static func build() -> UIViewController {
         
         let storyboard = UIStoryboard.init(name: "Main", bundle: nil)
         let view = storyboard.instantiateViewController(identifier: "HomeViewController") as! HomeViewController
         
         let interactor = HomeInteractor()
-        let router = HomeRouter()
+        let router = HomeRouter(view: view)
         
-        let presenter = HomePresenter(interactor: interactor, router: router)
+        let presenter = HomePresenter(view: view, interactor: interactor, router: router)
         view.presenter = presenter
         
         return view

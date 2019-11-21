@@ -6,7 +6,7 @@
 //  Copyright © 2019 Роман Лабунский. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 protocol HomeRouting {
 
@@ -14,6 +14,11 @@ protocol HomeRouting {
 
 class HomeRouter {
     
+    var viewController: UIViewController
+    
+    init(view: UIViewController) {
+        self.viewController = view
+    }
 }
 
 extension HomeRouter: HomeRouting {

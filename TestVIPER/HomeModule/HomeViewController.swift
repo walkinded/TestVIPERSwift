@@ -8,7 +8,8 @@
 
 import UIKit
 
-protocol HomeView {
+protocol HomeView: class {
+    func updatetitle(title: String) -> Void
     
 }
 
@@ -30,5 +31,8 @@ class HomeViewController: UIViewController {
 
 extension HomeViewController: HomeView{
     
+    func updatetitle(title: String){
+        helloLabel.text = "Hello VIPER!"
+    }
 }
 

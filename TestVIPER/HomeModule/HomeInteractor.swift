@@ -9,7 +9,7 @@
 import Foundation
 
 protocol HomeUseCase {
-    
+    func getTittle() -> HomeModel
 }
 
 
@@ -18,5 +18,9 @@ class HomeInteractor {
 }
 
 extension HomeInteractor: HomeUseCase {
+    
+    func getTittle() -> HomeModel {
+        return HomeModel(title: "Home VIPER! :)")
+    }
     
 }
