@@ -9,21 +9,31 @@
 /* Begin PBXBuildFile section */
 		CD53724C2386860600F3EFC7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD53724B2386860600F3EFC7 /* AppDelegate.swift */; };
 		CD53724E2386860600F3EFC7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD53724D2386860600F3EFC7 /* SceneDelegate.swift */; };
-		CD5372502386860600F3EFC7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD53724F2386860600F3EFC7 /* ViewController.swift */; };
+		CD5372502386860600F3EFC7 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD53724F2386860600F3EFC7 /* HomeViewController.swift */; };
 		CD5372532386860600F3EFC7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD5372512386860600F3EFC7 /* Main.storyboard */; };
 		CD5372552386861100F3EFC7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD5372542386861100F3EFC7 /* Assets.xcassets */; };
 		CD5372582386861100F3EFC7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD5372562386861100F3EFC7 /* LaunchScreen.storyboard */; };
+		CD53726123868A3100F3EFC7 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD53726023868A3100F3EFC7 /* HomePresenter.swift */; };
+		CD53726323868B2600F3EFC7 /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD53726223868B2600F3EFC7 /* HomeRouter.swift */; };
+		CD53726523868BB700F3EFC7 /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD53726423868BB700F3EFC7 /* HomeInteractor.swift */; };
+		CD53726723868C5D00F3EFC7 /* HomaModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD53726623868C5D00F3EFC7 /* HomaModel.swift */; };
+		CD53726A23868D6A00F3EFC7 /* HomeModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD53726923868D6A00F3EFC7 /* HomeModuleBuilder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		CD5372482386860600F3EFC7 /* TestVIPER.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestVIPER.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD53724B2386860600F3EFC7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CD53724D2386860600F3EFC7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		CD53724F2386860600F3EFC7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CD53724F2386860600F3EFC7 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		CD5372522386860600F3EFC7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CD5372542386861100F3EFC7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CD5372572386861100F3EFC7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CD5372592386861100F3EFC7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CD53726023868A3100F3EFC7 /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
+		CD53726223868B2600F3EFC7 /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
+		CD53726423868BB700F3EFC7 /* HomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
+		CD53726623868C5D00F3EFC7 /* HomaModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomaModel.swift; sourceTree = "<group>"; };
+		CD53726923868D6A00F3EFC7 /* HomeModuleBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModuleBuilder.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,13 +68,34 @@
 			children = (
 				CD53724B2386860600F3EFC7 /* AppDelegate.swift */,
 				CD53724D2386860600F3EFC7 /* SceneDelegate.swift */,
-				CD53724F2386860600F3EFC7 /* ViewController.swift */,
+				CD53726823868C8E00F3EFC7 /* Entity */,
+				CD53725F238687A900F3EFC7 /* HomeModule */,
 				CD5372512386860600F3EFC7 /* Main.storyboard */,
 				CD5372542386861100F3EFC7 /* Assets.xcassets */,
 				CD5372562386861100F3EFC7 /* LaunchScreen.storyboard */,
 				CD5372592386861100F3EFC7 /* Info.plist */,
 			);
 			path = TestVIPER;
+			sourceTree = "<group>";
+		};
+		CD53725F238687A900F3EFC7 /* HomeModule */ = {
+			isa = PBXGroup;
+			children = (
+				CD53724F2386860600F3EFC7 /* HomeViewController.swift */,
+				CD53726023868A3100F3EFC7 /* HomePresenter.swift */,
+				CD53726223868B2600F3EFC7 /* HomeRouter.swift */,
+				CD53726423868BB700F3EFC7 /* HomeInteractor.swift */,
+				CD53726923868D6A00F3EFC7 /* HomeModuleBuilder.swift */,
+			);
+			path = HomeModule;
+			sourceTree = "<group>";
+		};
+		CD53726823868C8E00F3EFC7 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				CD53726623868C5D00F3EFC7 /* HomaModel.swift */,
+			);
+			name = Entity;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,9 +169,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CD5372502386860600F3EFC7 /* ViewController.swift in Sources */,
+				CD53726A23868D6A00F3EFC7 /* HomeModuleBuilder.swift in Sources */,
+				CD5372502386860600F3EFC7 /* HomeViewController.swift in Sources */,
 				CD53724C2386860600F3EFC7 /* AppDelegate.swift in Sources */,
+				CD53726723868C5D00F3EFC7 /* HomaModel.swift in Sources */,
 				CD53724E2386860600F3EFC7 /* SceneDelegate.swift in Sources */,
+				CD53726523868BB700F3EFC7 /* HomeInteractor.swift in Sources */,
+				CD53726123868A3100F3EFC7 /* HomePresenter.swift in Sources */,
+				CD53726323868B2600F3EFC7 /* HomeRouter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
